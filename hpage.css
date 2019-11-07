@@ -1,0 +1,78 @@
+@import "nav.css";
+@import "bgc.css";
+html,body
+{
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+}
+.slider
+{
+	position: absolute;
+	width:70%;
+	height:50%;
+	left:15%;
+	top:10%;
+	overflow: hidden;
+}
+.slider div
+{
+	position: relative;
+	left:0%;
+	width:400%;
+	animation: slide 20s infinite;
+}
+.slider div img
+{
+	float: left;
+	width:25%;
+	height:100%;
+}
+@keyframes slide
+{
+	0%{
+		left:0%;
+	}
+	25%{
+		left:-100%;
+	}
+	50%{
+		left:-200%;
+	}
+	75%{
+		left:-300%;
+	}
+}
+.items
+{
+	position: absolute;
+	top:75%;
+	width:100%;
+	display: block;
+}
+.ItemType{
+	position: relative;
+	left:15%;
+	float:left;
+	width: 35%;
+	height:30%;
+	color:white;
+	margin: 5px;
+	background-color: #6d2dad;
+	display: block;
+}
+.ItemType:hover{
+	background-color: #f619fa;
+}
+.ItemType p{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100%;
+	font-size: 2vw;
+}
+@media only screen and (max-width:960px){
+	.ItemType{
+		left:32.5%;
+		float: none;
+	}
+}
